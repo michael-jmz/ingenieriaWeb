@@ -5,28 +5,28 @@
 }
 body{
 
-	background-color: rgb(170,122,57,1.0);
+	background: rgba(215, 211, 211, 0.3);
+	font-family: 'Poppins', sans-serif;
 }
-h1.titulos{
-	color: #ff0000
-	font-family: 'Poppins' sans-serif;
-}
+
 .contenedor {
 	background-color: #ccc;
 	width:90%;
 	margin: 0 auto; 
-	max-width: 1124px;/*maximo que se extiende es de 1124*/ 
+	max-width: 1800px;/*maximo que se extiende es de 1124*/ 
 
 	display: grid;
-	grid-template-columns: repeat(3, 1fr); /* se divide en 3 columnas nuestra pagina*/
+	grid-template-columns: repeat(2, 1fr); /* se divide en 3 columnas nuestra pagina*/
 	grid-template-rows: repeat(5, auto); /* se divide en 5 filas nuestra pagina*/
-	grid-gap:  10px;
+	grid-gap:  0px;
 	/*Podemos crear cualquier variable */
-	grid-template-areas:"header header header" /* Decimos que el header ocupe las 3 columnas*/
-						"nav nav nav" /* Decimos que el nav ocupe las 3 columnas*/
-						"contenido contenido sidebar" /* Decimos que contenido ocupe 1 y 2columns  y slider la tercera*/
-						"noticia1 noticia2 sidebar" /* Decimos que  noticia 1 ocupe 1 columnas noticia 2 segunda y slider la tercera*/
-						"footer footer footer"; 
+	grid-template-areas:"header header" /* Decimos que el header ocupe las 3 columnas*/
+						"slider slider" /* Decimos que el nav ocupe las 3 columnas*/
+						"titulo1 titulo1" /* Decimos que contenido ocupe 1 y 2columns  y slider la tercera*/
+						"adopta1 adopta2" /* Decimos que  noticia 1 ocupe 1 columnas noticia 2 segunda y slider la tercera*/
+						"doctor doctor"
+						"sponsor sponsor"
+						"footer footer"; 
 
 }
 /*--------------------------------------------------*/
@@ -34,45 +34,119 @@ h1.titulos{
 /*--------------------------------------------------*/
 .contenedor .cabeceraPrincipal{
 	grid-area: header;
-	background-color: yellow;
-}
-.contenedor .menuPrincipal{
-	grid-area: nav;
-	background-color: #8D99AE;
-}
-.contenedor .contenido {
-	grid-area: contenido;
-	background-color: #2b2d42;
-	color: #ffffff;
-	padding: 60px;
+	background-color: #B5EF8A;
+	display: flex;
+	justify-content: space-between;
 
 }
-.contenedor .sidebar{
-	grid-area: sidebar;
-	background-color: #aa7bc3;
-	color:#ffffff;
+.contenedor .cabeceraPrincipal .logotipo{
+	padding: 10px 40px;
+}
+/*---------------------------------------------*/
+/*              menuPrincipal                  */
+/*---------------------------------------------*/
+.contenedor .cabeceraPrincipal .menuPrincipal {
+	display: flex;
+	align-items: center; /*centra en el bloque */
+}
+.menuPrincipal a {
+	text-decoration: none;
+	padding: 0 20px;
+	transition-duration: 0.4s;
+}
+.menuPrincipal a:hover{
+	background-color: #65524D;
+	color: #fff;
+}
+
+/*---------------------------------------------*/
+/*             Slider principal                */
+/*---------------------------------------------*/
+.contenedor .sliderPrincipal {
+	grid-area: slider;
+	background-color: #fff;
 
 }
-.contenedor .noticia1{
-	grid-area: noticia1;
+.contenedor .sliderPrincipal img {
+	width: 100%;
+}
+
+/*--------------------------------------*/
+/*             Adopcion                 */
+/*--------------------------------------*/
+.contenedor .titulo {
+	grid-area: titulo1;
+	text-align: center;
+}
+.contenedor .titulo h2 {
+	font-size:32px;
+	padding: 20px 0;
+}
+.contenedor .adopcion1, .contenedor .adopcion2 {
+	grid-area: adopta1;
+	display:flex;
+	justify-content: space-between;
+}
+.contenedor .adopcion2 {
+	grid-area: adopta2;
+}
+.contenedor .adopcion1 h3, .contenedor .adopcion2 h3 {
+	padding: 20px 20px;
+	font-size: 25px;
+}
+.contenedor .adopcion1 p , .contenedor .adopcion2 p{
+	padding: 10px 20px;
+	color: #605B5B;
+}
+/*--------------------------------------*/
+/*             Doctores                 */
+/*--------------------------------------*/
+
+.contenedor .doctor{
+	grid-area: doctor;
 	background-color: #333;
-	color:#FFFFFF;
-	padding: 30px;
-
 }
-.contenedor .noticia2{
-	grid-area: noticia2;
+/*--------------------------------------*/
+/*             Sponsor                 */
+/*--------------------------------------*/
+.contenedor .sponsor{
+	grid-area: sponsor;
 	background-color: #333;
-	color:#FFFFFF;
-	padding: 30px;	
 }
+/*--------------------------------------*/
+/*             Footer                   */
+/*--------------------------------------*/
 .contenedor .piePagina{
 	grid-area: footer;
-	background-color: #333;
-	color: #ffffff;
+	background-color: #1B1B1B;
+	display: flex;
+	justify-content: space-between;
+}
+.contenedor .piePagina .derechos {
+	padding: 2em;
 	text-align: center;
+}
+.contenedor .piePagina .derechos h6{
+	color: #A3A3A3
 
 }
+.contenedor .piePagina .derechos a{
+	color: #fff;
+	padding: 0 10px;
+	text-decoration: none;
+
+}
+.contenedor .piePagina .redesSociales{
+	padding: 2em;
+	font-size: 25px;
+}
+contenedor .piePagina .redesSociales a{
+	color: #fff;
+	padding: 0 10px;
+	text-decoration: none;
+}
+
+
 
 @media only screen and (max-width: 600px) {
   body {
@@ -89,4 +163,54 @@ h1.titulos{
 						"footer footer footer"; 
 					}
 
+}
+
+/*--------------------------------------*/
+/*             Personalizados           */
+/*--------------------------------------*/
+.colorAzul{
+	color: #8117ff;
+}
+.colorRojo{
+	color: red;
+}
+.espacio{
+	padding: 2em 0;
+}
+.mayusculas {
+	text-transform: uppercase;
+}
+
+
+/*--------------------------------------*/
+/*             Buttons                  */
+/*--------------------------------------*/
+
+.button {
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	border-radius: 9px;
+  }
+  .button1 {
+	background-color: #D7F171; 
+	color: #494949; 
+	border: 0px solid #4CAF50;
+  }
+  
+  .button1:hover {
+	background-color: #4CAF50;
+	color: white;
+  }
+  .buttonDererecha {
+	text-align: right;
+	padding: 10px ;
 }
