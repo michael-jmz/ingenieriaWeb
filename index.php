@@ -52,7 +52,7 @@
 	</section>
 
 	<section class="adopcion2">
-		<img src="images/dog2.jpg" title="dog1">
+		<img src="images/dog2.jpg" title="rex">
 		<article class="card1">
 			<h3 class="mayusculas colorAzul">Firulais</h3>
 			<p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -67,10 +67,20 @@
 				<button class="button button1">Mas Informacion</button>
 			</div>
 		</article>
+	</section>	
+	<section class="doctor1">
+		<img class="img1"src="images/doctor1.jpg" title="doctor 1">
 	</section>
-	<section class="doctor">
-		<h3>Doctores</h3>
+	<section class="doctor2">
+		<img class="img2"src="images/doctor2.jpg" title="doctor 2">
 	</section>
+	<section class="doctor3">
+		<img class="img3" src="images/doctor3.jpg" title="doctor 3">
+	</section>
+	<section class="doctor4">
+		<img class="img4"src="images/doctor4.jpg" title="doctor 4">
+	</section>
+	
 	<section class="sponsor">
 		<h3 class="colorAzul">Sponsor</h3>
 	</section>
