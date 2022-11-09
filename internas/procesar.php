@@ -16,5 +16,4 @@ $correo=$_POST['correo'];
 echo "Bienvenido ".$nombre." <br> 💪</strong>";
 echo $apellidos."<br>";
 echo "<strong class='colorRojo'>".$apellidos."</strong> <br>";
-
 ?>

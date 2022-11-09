@@ -30,7 +30,7 @@
 	<section class="titulo"><h2 class="colorAzul mayusculas">Adopción</h2></section>
 
 	<section class="adopcion1">
-		<img src="images/dog1.jpg" title="firulais" descrition="Perro de adopcion">
+		<img class="imgdog" src="images/dog1.jpg" title="firulais" descrition="Perro de adopcion">
 		<article class ="card1">
 			<h3 class="mayusculas colorAzul">Firulais</h3>
 			<p class="derecha">
@@ -52,7 +52,7 @@
 	</section>
 
 	<section class="adopcion2">
-		<img src="images/dog2.jpg" title="rex">
+		<img class="imgdog" src="images/dog2.jpg" title="rex">
 		<article class="card1">
 			<h3 class="mayusculas colorAzul">Firulais</h3>
 			<p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -70,20 +70,22 @@
 	</section>	
 	<section class="tituloDoctores"><h2 class="colorAzul mayusculas">Doctores</h2></section>
 	<section class="doctor">
-		<article class=carDoctor1>
-		<img class="img1"src="images/doctor1.jpg" alt="Doctor 1"title="doctor 1">
+		<article class="carDoctor">
+			<img class="img1" src="images/doctor1.jpg" alt="Doctor 1"title="doctor 1">
 		</article>
-		<article class=carDoctor2>
-		<img class="img1"src="images/doctor2.jpg" alt="Dcotor 2"title="doctor 2">
+
+		<article class="carDoctor">
+			<img class="img1" src="images/doctor2.jpg" alt="Dcotor 2"title="doctor 2">
 		</article>
-		<article class=carDoctor3>
-		<img class="img1"src="images/doctor3.jpg" alt="Doctor 3"title="doctor 3">
+
+		<article class="carDoctor">
+			<img class="img1" src="images/doctor3.jpg" alt="Doctor 3"title="doctor 3">
 		</article>
-		<article class=carDoctor4>
-		<img class="img1"src="images/doctor4.jpg" alt="Doctor 4"title="doctor 4">
+
+		<article class="carDoctor">
+			<img class="img1" src="images/doctor4.jpg" alt="Doctor 4"title="doctor 4">
 		</article>
 	
-
 	</section>
 	
 	

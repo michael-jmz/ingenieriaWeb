@@ -24,7 +24,7 @@
 		</nav>
 	</header>
 	<main>
-		<h2>Fomurulario de adopcion</h2>
+		<h2>Formulario de adopcion</h2>
 		<form method="post" action="procesar.php">
 			<div class="grupoinput">
 				<label for="nombres">nombres</label> 

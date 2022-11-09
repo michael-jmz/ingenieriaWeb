@@ -86,19 +86,21 @@ body{
 .contenedor .adopcion1, .contenedor .adopcion2 {
 	grid-area: adopta1;
 	display:flex;
-	flex-wrap: wrap;
 	justify-content: space-between;
+	padding:0 10px;
+
 }
 .contenedor .adopcion2 {
 	grid-area: adopta2;
 }
 .contenedor .adopcion1 h3, .contenedor .adopcion2 h3 {
-	padding: 20px 20px;
+	padding: 10px 20px;
 	font-size: 25px;
 }
 .contenedor .adopcion1 p , .contenedor .adopcion2 p{
 	padding: 10px 20px;
 	color: #605B5B;
+	font-size: 11px;
 }
 /*--------------------------------------*/
 /*             Doctores                 */
@@ -116,19 +118,17 @@ body{
 	width: 90%;
 	margin: 0 auto;
 }
-.contenedor .doctor .carDoctor1{
+.contenedor .doctor .carDoctor{
 	display: flex;
+	width: 100%;
+	margin: 2em 2em;
 
 }
-.contenedor .doctor .carDoctor2{
-	display: flex;
+
+.contenedor .doctor .carDoctor .img1{
+	width:100%;
 }
-.contenedor .doctor .carDoctor3{
-	display: flex;
-}
-.contenedor .doctor .carDoctor4{
-	display: flex;
-}
+
 
 /*--------------------------------------*/
 /*             Sponsor                 */
