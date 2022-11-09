@@ -20,13 +20,14 @@ body{
 	grid-template-rows: repeat(7, auto); /* se divide en 5 filas nuestra pagina*/
 	grid-gap:  0px;
 	/*Podemos crear cualquier variable */
-	grid-template-areas:"header header header header" /* Decimos que el header ocupe las 3 columnas*/
-						"slider slider slider slider " /* Decimos que el nav ocupe las 3 columnas*/
-						"titulo1 titulo1 titulo1 titulo1" /* Decimos que contenido ocupe 1 y 2columns  y slider la tercera*/
-						"adopta1 adopta1 adopta2 adopta2" /* Decimos que  noticia 1 ocupe 1 columnas noticia 2 segunda y slider la tercera*/
-						"doctor1 doctor2 doctor3 doctor4"
-						"sponsor sponsor sponsor sponsor"
-						"footer footer footer footer"; 
+	grid-template-areas:"header header" /* Decimos que el header ocupe las 3 columnas*/
+						"slider slider " /* Decimos que el nav ocupe las 3 columnas*/
+						"titulo1 titulo1" /* Decimos que contenido ocupe 1 y 2columns  y slider la tercera*/
+						"adopta1 adopta2" /* Decimos que  noticia 1 ocupe 1 columnas noticia 2 segunda y slider la tercera*/
+						"tituloDoc tituloDoc"
+						"doctor1 doctor1 "
+						"sponsor sponsor"
+						"footer footer"; 
 
 }
 /*--------------------------------------------------*/
@@ -85,6 +86,7 @@ body{
 .contenedor .adopcion1, .contenedor .adopcion2 {
 	grid-area: adopta1;
 	display:flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 }
 .contenedor .adopcion2 {
@@ -102,33 +104,77 @@ body{
 /*             Doctores                 */
 /*--------------------------------------*/
 
-.contenedor .doctor1, .contenedor .doctor2 .contenedor .doctor3, .contenedor .doctor4 {
+.contenedor .tituloDoctores{
+	grid-area: tituloDoc;
+	text-align: center;
+}
+
+.contenedor .doctor {
 	grid-area: doctor1;
 	display: flex;
 	justify-content: space-between;
-	
+	width: 90%;
+	margin: 0 auto;
 }
-.contenedor .doctor2{
-	grid-area: doctor2;
+.contenedor .doctor .carDoctor1{
+	display: flex;
+
 }
-.contenedor .doctor3{
-	grid-area: doctor3;
+.contenedor .doctor .carDoctor2{
+	display: flex;
 }
-.contenedor .doctor4{
-	grid-area: doctor4;
+.contenedor .doctor .carDoctor3{
+	display: flex;
 }
-
-
-
-
+.contenedor .doctor .carDoctor4{
+	display: flex;
+}
 
 /*--------------------------------------*/
 /*             Sponsor                 */
 /*--------------------------------------*/
+
 .contenedor .sponsor{
 	grid-area: sponsor;
 	background-color: #333;
 }
+/*--------------------------------------*/
+/*            contenido main            */
+/*--------------------------------------*/
+main {
+	grid-area: slider;
+	margin: 0 auto	;
+	width: 90%;
+	padding: 2em 0;
+}
+main h2{
+	color: #817E9F;
+	font-size: 2em
+}
+main p {
+	color:#605B5B;
+	font-size: 1em;
+	line-height: 30px; 
+}
+/*--------------------------------------*/
+/*             formulario               */
+/*--------------------------------------*/
+main .grupoinput {
+	display: block;
+	padding: 0.5em 0;
+}
+.grupoinput label{
+	display: block;
+	font-size:1em;
+}
+.grupoinput input[type=text],input[type=mail],input[type=date],input[type=number] {
+	width: 90%;
+	padding: 15px 20px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+
+}
+
 /*--------------------------------------*/
 /*             Footer                   */
 /*--------------------------------------*/
@@ -220,6 +266,10 @@ contenedor .piePagina .redesSociales a{
 	background-color: #D7F171; 
 	color: #494949; 
 	border: 0px solid #4CAF50;
+  }
+  .button:hover {
+	background-color: #32cc37;
+	color: white;
   }
   
   .button1:hover {

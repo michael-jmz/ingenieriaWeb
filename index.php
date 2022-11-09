@@ -16,10 +16,10 @@
 	<header class="cabeceraPrincipal">
 		<section class="logotipo"><img src="images/logotipoPet.png"></section>
 		<nav class="menuPrincipal">
-			<a href="#">Inicio</a>
+			<a href="inicio.php">Inicio</a>
 			<a href="internas/servicios.php">Servicios</a>
 			<a href="#">Productos</a>
-			<a href="#">Adopción</a>
+			<a href="internas/adopcion.php">Adopción</a>
 			<a href="#">Contactos</a>
 		</nav>
 	</header>
@@ -68,18 +68,24 @@
 			</div>
 		</article>
 	</section>	
-	<section class="doctor1">
-		<img class="img1"src="images/doctor1.jpg" title="doctor 1">
+	<section class="tituloDoctores"><h2 class="colorAzul mayusculas">Doctores</h2></section>
+	<section class="doctor">
+		<article class=carDoctor1>
+		<img class="img1"src="images/doctor1.jpg" alt="Doctor 1"title="doctor 1">
+		</article>
+		<article class=carDoctor2>
+		<img class="img1"src="images/doctor2.jpg" alt="Dcotor 2"title="doctor 2">
+		</article>
+		<article class=carDoctor3>
+		<img class="img1"src="images/doctor3.jpg" alt="Doctor 3"title="doctor 3">
+		</article>
+		<article class=carDoctor4>
+		<img class="img1"src="images/doctor4.jpg" alt="Doctor 4"title="doctor 4">
+		</article>
+	
+
 	</section>
-	<section class="doctor2">
-		<img class="img2"src="images/doctor2.jpg" title="doctor 2">
-	</section>
-	<section class="doctor3">
-		<img class="img3" src="images/doctor3.jpg" title="doctor 3">
-	</section>
-	<section class="doctor4">
-		<img class="img4"src="images/doctor4.jpg" title="doctor 4">
-	</section>
+	
 	
 	<section class="sponsor">
 		<h3 class="colorAzul">Sponsor</h3>

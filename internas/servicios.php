@@ -17,9 +17,9 @@
 		<section class="logotipo"><img src="../images/logotipoPet.png"></section>
 		<nav class="menuPrincipal">
 			<a href="../">Inicio</a>
-			<a href="#">Servicios</a>
+			<a href="servicios.php">Servicios</a>
 			<a href="#">Productos</a>
-			<a href="#">Adopción</a>
+			<a href="adopcion.php">Adopción</a>
 			<a href="#">Contactos</a>
 		</nav>
 	</header>
