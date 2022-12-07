@@ -20,48 +20,56 @@
 			<a href="servicios.php">Servicios</a>
 			<a href="#">Productos</a>
 			<a href="#">Adopción</a>
-			<a href="#">Contactos</a>
+			<a href="postulacion.php">Postulaciones </a>
+			<a href="listadoPostulacion.php">Listado de Postulantes</a>
 		</nav>
 	</header>
 	<main>
-		<h2>Formulario de adopcion</h2>
-		<form method="post" action="procesar.php">
+	<?php
+
+	include ("../dll/conexion.php"); // incluidos el archivo de conexion para poder conectarnos a la db
+	include ("../dll/class_mysql.php"); // incluidos el archivo de conexion para poder conectarnos a la db
+	$miConexion= new class_mysqli();
+	$miConexion->conectar (DBHOST, DBUSER, DBPASS, DBNAME);
+	
+?>
+		<h2>Formulario de postulaciones</h2>
+		<form method="post" action="guardarPostulacion.php">
 			<div class="grupoinput">
 				<label for="nombres">Nombres</label> 
 				<input id="nombres"type="text" name="nombres" placeholder="Ingrese nombres" required>
 			</div>
 			<div class="grupoinput">
-				<label for="apellidos">Apellidos</label> 
-				<input id="apellidos"type="text" name="apellidos" placeholder="Ingrese sus apellidos">
+				<label for="sapellidos">Apellidos</label> 
+				<input id="apellidos"type="text" name="apellidos" placeholder="Ingrese sus apellidos"required>
+			</div>
+			
+			<div class="grupoinput">
+				<label for="direccion">Dirección</label> 
+				<input id="direccion"type="text" name="direccion" placeholder="Ingrese su direccion"required>
+			</div>
+            <div class="grupoinput">
+				<label for="correo">Correo</label> 
+				<input id="correo"type="mail" name="correo" placeholder="Ingrese su correo"required>
 			</div>
 			<div class="grupoinput">
 				<label for="cedula">Cédula</label> 
-				<input id="cedula"type="text" name="cedula" placeholder="Ingrese su cedula">
+				<input id="cedula"type="text" name="cedula" placeholder="Ingrese su cedula"required>
 			</div>
 			<div class="grupoinput">
-				<label for="telefono">Teléfono</label> 
-				<input id="telefono"type="text" name="telefono" placeholder="Ingrese su telefono">
+				<label for="cars">Mascota</label>
+				<select name="mascota" id="mascota" required>
+        			<?php
+					$miConexion->consulta('SELECT mascota_id , nombre FROM mascotas');
+					$miConexion->verMascotas();
+        			?>
+      			</select>
 			</div>
-			<div class="grupoinput">
-				<label for="direccion">Dirección</label> 
-				<input id="direccion"type="text" name="direccion" placeholder="Ingrese su direccion">
-			</div>
-			<div class="grupoinput">
-				<label for="fechaNacimiento">Fecha de nacimiento</label> 
-				<input id="fechaNacimiento"type="date" name="fechaNacimiento" placeholder="Ingrese su fecha de nacimiento">
-			</div>
-			<div class="grupoinput">
-				<label for="correo">Correo</label> 
-				<input id="correo"type="mail" name="correo" placeholder="Ingrese su correo">
-			</div>
-			<button class ="button"type="submit"> Guardar Datos</button>
+			<button class ="button"type="submit"> Postular Adopción</button>
 			
 		</form>
 
 	</main>
-	<section class="sponsor">
-		<h3 class="colorAzul">Sponsor</h3>
-	</section>
 	<footer class="piePagina">
 		<section class="derechos">
 			<h6>Derechos Reservados UTPL 2022</h6>

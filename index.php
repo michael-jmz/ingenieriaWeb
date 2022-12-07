@@ -19,8 +19,12 @@
 			<a href="inicio.php">Inicio</a>
 			<a href="internas/servicios.php">Servicios</a>
 			<a href="#">Productos</a>
-			<a href="internas/adopcion.php">Adopción</a>
-			<a href="#">Contactos</a>
+			<a href="#">Adopción</a>
+			<a href="internas/personal.php">Personal</a>
+			<a href="internas/postulaciones.php">Postulaciones </a>
+			<a href="internas/listadoPostulaiones.php">Listados de Postulantes</a>
+
+
 		</nav>
 	</header>
 	<section class="sliderPrincipal">
@@ -91,19 +95,12 @@
 	
 	<section class="sponsor">
 		<h3 class="colorAzul">Sponsor</h3>
+		<img src="images/logohappypets.png">
+		<img src="images/logoUtpl.png">
 	</section>
 	
 <!--FOOTER-->
-	<footer class="piePagina">
-		<section class="derechos">
-			<h6>Derechos Reservados UTPL 2022</h6>
-		</section>
-		<nav class="redesSociales">
-			<a href=""><i class="fa-brands fa-facebook"></i></a>
-			<a href=""><i class="fa-brands fa-instagram"></i></a>
-			<a href=""><i class="fa-brands fa-tiktok"></i></a>
-		</nav>
-	</footer>
+	<?php include ("footer.php");?>
 	</div>
 
 </body>

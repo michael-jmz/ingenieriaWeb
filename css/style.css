@@ -2,6 +2,7 @@
 	padding: 0;/*se extiende borde de un lemento hacia ADENTRO*/
 	margin: 0;/*se extiende borde de un lemento hacia AFUERA*/
 	
+	
 }
 body{
 
@@ -115,14 +116,15 @@ body{
 	grid-area: doctor1;
 	display: flex;
 	justify-content: space-between;
-	width: 90%;
+	width: 95%;
 	margin: 0 auto;
 }
 .contenedor .doctor .carDoctor{
 	display: flex;
 	width: 100%;
-	margin: 2em 2em;
-
+	padding: 10px 10px;
+	
+	
 }
 
 .contenedor .doctor .carDoctor .img1{
@@ -137,6 +139,12 @@ body{
 .contenedor .sponsor{
 	grid-area: sponsor;
 	background-color: #333;
+	text-align: center;
+	padding: 1em 0;
+}
+.contenedor .sponsor h3{
+	padding-bottom: 1em;
+	color: #4B4B4B;
 }
 /*--------------------------------------*/
 /*            contenido main            */
@@ -174,7 +182,31 @@ main .grupoinput {
 	border: 1px solid #ccc;
 
 }
+/*--------------------------------------*/
+/*           Formulario Actualizar      */
+/*--------------------------------------*/
+main .grupoinputF {
+	display: center;
+	padding: 0.5em 0;
+}
+.grupoinputF label{
+	display: block;
+	font-size:1em;
+}
+.grupoinputF input[type=text],input[type=mail],input[type=date],input[type=number] {
+	width: 90%;
+	padding: 15px 20px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
 
+}
+/*A todos las clases que tengan un input que tengan el atributo required
+tomamos la etique label, pero no directamente sino el seudoselector after*/
+.grupoinput:has(input:required, select:required) label:after{
+	content: "*";
+	color:red;
+
+}
 /*--------------------------------------*/
 /*             Footer                   */
 /*--------------------------------------*/
@@ -201,12 +233,32 @@ main .grupoinput {
 .contenedor .piePagina .redesSociales{
 	padding: 2em;
 	font-size: 25px;
+	position: relative;
+	margin: 0 20px;
+	cursor: pointer;
 }
-contenedor .piePagina .redesSociales a{
+.contenedor .piePagina .redesSociales a{
 	color: #fff;
 	padding: 0 10px;
 	text-decoration: none;
+	position: relative;
 }
+.contenedor .piePagina .fa-brans {
+	font-size: 6em;
+	color: #222;
+}
+.contenedor .piePagina a::before{
+	font-family: "FontAwesone";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 0;
+	font-size: 6em;
+	overflow: hidden;
+	transition: 0.5s ease-in-out;
+
+}
+
 
 
 

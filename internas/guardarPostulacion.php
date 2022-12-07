@@ -10,30 +10,26 @@ include ("../dll/class_mysql.php"); // incluidos el archivo de conexion para pod
 
 //extract ($_POST);   //obtiene todo
 
-$nombre=$_POST['nombres'];//debemos extraer una a uno por seguridad
+$nombres=$_POST['nombres'];//debemos extraer una a uno por seguridad
 $apellidos=$_POST['apellidos'];
-$cedula=$_POST['cedula'];
-$telefono=$_POST['telefono'];
 $direccion=$_POST['direccion'];
-$fecha=$_POST['fechaNacimiento'];
 $correo=$_POST['correo'];
+$cedula=$_POST['cedula'];
 
 echo "Bienvenido ".$nombre." <br> 💪</strong>";
 echo $apellidos."<br>";
 echo "<strong class='colorRojo'>".$apellidos."</strong> <br>";
 
 
-$sql="INSERT INTO personal VALUES ('','$nombre','$apellidos','$cedula','$telefono', '$direccion','$fecha','$correo')";
-//$sql ="delete from personal where id=1";
-//$sql = "update personal set nombres= 'Rousmary' , apellidos='Pardo' where id=2";
+$sql="INSERT INTO postulaciones VALUES ('','$nombres','$apellidos','$direccion', '$correo','$cedula')";
 $resSQL=$miConexion->consulta ($sql);
 
 if ($resSQL==""){
     echo "problemas de ejecucion";
 }else{
-    echo "Guardado correctamente";
-    echo '<script> alert ("Sentencia Ejecutada...");</script>';
-    echo "<script> location.href='adopcion.php'</script>";
+    echo "Postulación exitosa";
+    echo '<script> alert ("Postulación exitosa...");</script>';
+    echo "<script> location.href='listadoPostulacion.php'</script>";
 }
 
 ?>
