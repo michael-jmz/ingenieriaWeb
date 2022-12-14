@@ -35,7 +35,7 @@
     $miConexion= new class_mysqli();
     $miConexion->conectar (DBHOST, DBUSER, DBPASS, DBNAME);
     //$miConexion->consulta ("select *from personal");
-	$miConexion->consulta("select id, nombres, apellidos, correo 'E-mail' from personal");
+	$miConexion->consulta("select personal_id, nombre, apellido, correo 'E-mail' from personal");
 	$miConexion->borrarRegistro();
     ?>
 	</main>

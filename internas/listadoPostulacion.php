@@ -45,8 +45,8 @@
     $miConexion= new class_mysqli();
     $miConexion->conectar (DBHOST, DBUSER, DBPASS, DBNAME);
     //$miConexion->consulta ("select *from personal");
-	$miConexion->consulta("SELECT   personal.persona_id 'ID',
-                                    personal.nombre 'Nombres', 
+	$miConexion->consulta("SELECT 	personal.persona_id 'ID', 
+									personal.nombre 'Nombres', 
                                     personal.apellido 'Apellidos',
                                     personal.cedula 'Cédula', 
                                     mascotas.nombre 'Mascota', 

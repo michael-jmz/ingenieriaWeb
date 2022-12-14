@@ -40,7 +40,7 @@
 				<input id="nombres"type="text" name="nombres" placeholder="Ingrese nombres" required>
 			</div>
 			<div class="grupoinput">
-				<label for="sapellidos">Apellidos</label> 
+				<label for="apellidos">Apellidos</label> 
 				<input id="apellidos"type="text" name="apellidos" placeholder="Ingrese sus apellidos"required>
 			</div>
 			
@@ -57,8 +57,8 @@
 				<input id="cedula"type="text" name="cedula" placeholder="Ingrese su cedula"required>
 			</div>
 			<div class="grupoinput">
-				<label for="cars">Mascota</label>
-				<select name="mascota" id="mascota" required>
+				<label for="mascotas">Mascota</label>
+				<select name="mascotas" id="mascota" required>
         			<?php
 					$miConexion->consulta('SELECT mascota_id , nombre FROM mascotas');
 					$miConexion->verMascotas();

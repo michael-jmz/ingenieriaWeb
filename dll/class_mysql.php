@@ -106,11 +106,11 @@ function borrarRegistro(){
 		echo "</table>";
 }
 function verMascotas(){
-    echo "<option value=''>Seleccione:</option>";
+    echo "<option selected disabled=''>Seleccione mascota:</option>";
     while ($row=mysqli_fetch_array($this->Consulta_ID)){
         
             //value='.$row[0].' deveulve el valor al selecionar la opcion en este caso el id de mascota
-            echo "<option value='.$row[0].'>".$row[1]."</option>";   
+            echo "<option value='$row[0]'>".$row[1]."</option>";         
     }
 }
 function verLsitaPostulaciones(){
@@ -136,8 +136,15 @@ function verLsitaPostulaciones(){
 		}
 		echo "</table>";
 }
-
-    
+function consulta_lista(){
+    while ($row = mysqli_fetch_array($this->Consulta_ID)) {
+        for ($i=0; $i < $this->numcampos(); $i++) {
+            $row[$i];
+        }
+        return $row;
+    }
+}
+   
 }
 
 ?>

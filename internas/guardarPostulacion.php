@@ -10,19 +10,26 @@ include ("../dll/class_mysql.php"); // incluidos el archivo de conexion para pod
 
 //extract ($_POST);   //obtiene todo
 
-$nombres=$_POST['nombres'];//debemos extraer una a uno por seguridad
-$apellidos=$_POST['apellidos'];
+$nombre=$_POST['nombres'];//debemos extraer una a uno por seguridad
+$apellido=$_POST['apellidos'];
 $direccion=$_POST['direccion'];
 $correo=$_POST['correo'];
 $cedula=$_POST['cedula'];
+$id_mascota=$_POST['mascotas'];
 
-echo "Bienvenido ".$nombre." <br> 💪</strong>";
-echo $apellidos."<br>";
-echo "<strong class='colorRojo'>".$apellidos."</strong> <br>";
+echo "Bienvenido".$nombre." <br> 💪</strong><br>";
+echo $id_mascota."<br>";
+echo $apellido."<br>";
+echo "<strong class='colorRojo'>".$apellido."</strong> <br>";
 
+$setencia="INSERT INTO personal VALUES ('','$nombre','$apellido','$direccion','$correo','$cedula')";
 
-$sql="INSERT INTO postulaciones VALUES ('','$nombres','$apellidos','$direccion', '$correo','$cedula')";
-$resSQL=$miConexion->consulta ($sql);
+$miconexion->consulta($setencia);
+$miconexion->consulta('SELECT max(id) FROM personal');
+$lista=$miconexion->consulta_lista();
+$miconexion->consulta("INSERT INTO mascota_personal VALUES('','$lista[0]','$id_mascota')");
+
+$resSQL=$miConexion->consulta ($setencia);
 
 if ($resSQL==""){
     echo "problemas de ejecucion";

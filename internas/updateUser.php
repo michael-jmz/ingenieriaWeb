@@ -28,7 +28,6 @@ if (isset($_GET['idUser'])) $idUser;
 if ($count > 0){
     $datos=$stmt->fetch();
 }
-
 ?>
 <body>
    <div class="contenedor">
